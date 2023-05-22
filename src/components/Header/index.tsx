@@ -4,7 +4,6 @@ import Socials from "../Socials";
 
 const StyledToolbar = styled(Toolbar)(() => ({
   backgroundImage: `url(${background})`,
-  backgroundPosition: "50%",
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",
 }));
