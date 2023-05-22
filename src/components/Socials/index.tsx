@@ -1,11 +1,9 @@
-import { GitHub, LinkedIn, YouTube } from "@mui/icons-material";
+import { GitHub, LinkedIn } from "@mui/icons-material";
 import {
-  SpeedDial,
-  SpeedDialAction,
-  SpeedDialIcon,
+  Box,
+  IconButton,
   SvgIcon,
   SvgIconProps,
-  useTheme,
 } from "@mui/material";
 
 const Thingiverse = (props: SvgIconProps) => (
@@ -23,10 +21,6 @@ const socials: { [key: string]: { icon: JSX.Element; url: string } } = {
     icon: <LinkedIn />,
     url: "https://www.linkedin.com/in/joseph-sturgeon-99463118b",
   },
-  youtube: {
-    icon: <YouTube />,
-    url: "https://www.youtube.com/@sturgelikethefish",
-  },
   thingiverse: {
     icon: <Thingiverse />,
     url: "https://www.thingiverse.com/joesturge",
@@ -34,29 +28,21 @@ const socials: { [key: string]: { icon: JSX.Element; url: string } } = {
 };
 
 const Socials = () => {
-  const theme = useTheme();
-
   return (
-    <SpeedDial
-      ariaLabel="social media links"
-      sx={{
-        position: "absolute",
-        bottom: theme.spacing(2),
-        right: theme.spacing(2),
-      }}
-      icon={<SpeedDialIcon />}
-    >
+    <Box>
       {Object.keys(socials).map((key) => (
-        <SpeedDialAction
-          icon={socials[key].icon}
+        <IconButton
           key={key}
           aria-label={key}
-          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-          // @ts-ignore
-          FabProps={{ href: socials[key].url, target: "_blank" }}
-        />
+          href={socials[key].url}
+          target="_blank"
+          color="inherit"
+          tabIndex={0}
+        >
+          {socials[key].icon}
+        </IconButton>
       ))}
-    </SpeedDial>
+    </Box>
   );
 };
 

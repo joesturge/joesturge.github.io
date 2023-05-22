@@ -69,6 +69,12 @@ const components: MDXComponents = {
     const Hr = (props: any) => <Divider {...props} component="hr" />;
     return memo(Hr);
   })(),
+  em: (() => {
+    const Em = (props: any) => (
+      <Typography {...props} color="secondary" component="span" />
+    );
+    return memo(Em);
+  })(),
   wrapper: (() => {
     const Wrapper = (props: any) => (
       <div {...props} className="markdown-body" />
