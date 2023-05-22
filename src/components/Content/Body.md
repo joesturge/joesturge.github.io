@@ -16,8 +16,7 @@ Check out my socials above!
 ### Soft Skills
 
 - Mentoring
-- Technical
-- Leadership
+- Technical Leadership
 - Scrum
 - Agile
 
