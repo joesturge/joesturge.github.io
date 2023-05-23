@@ -17,6 +17,7 @@
     "@mdx-js/rollup": "^2.3.0",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.13.1",
+    "julia-set": "^0.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
