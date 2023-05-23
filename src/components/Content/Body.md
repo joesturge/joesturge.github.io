@@ -1,6 +1,6 @@
 ### Welcome
 
-Hello 👋 im *Joe Sturgeon* a Full-Stack engineer.
+Hello 👋 I'm *Joe Sturgeon* a Full-Stack engineer.
 
 Check out my socials above!
 
