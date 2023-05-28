@@ -17,7 +17,7 @@
     "@mdx-js/rollup": "^2.3.0",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.13.1",
-    "culori": "^3.1.0",
+    "color-interpolate": "^1.0.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-use": "^17.4.0"

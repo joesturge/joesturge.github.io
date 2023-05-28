@@ -1,6 +1,6 @@
 import { createRef, useCallback, useEffect, useState } from "react";
 import { useInterval, useWindowSize } from "react-use";
-import { formatHex, interpolate } from "culori";
+import interpolate from "color-interpolate";
 
 const FRAMERATE = 10;
 
@@ -93,12 +93,12 @@ const Canvas = (props: { colorRamp: string[] }) => {
             for (let i = 0; i < iterations; i++) {
               next = addc(squarec(next), c);
               if (absc(next) > 2) {
-                drawPixel(x, y, formatHex(greys(i / iterations)), context);
+                drawPixel(x, y, greys(i / iterations), context);
                 return;
               }
             }
 
-            drawPixel(x, y, formatHex(greys(1)), context);
+            drawPixel(x, y, greys(1), context);
           },
           width,
           height
