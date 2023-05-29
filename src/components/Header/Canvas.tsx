@@ -16,7 +16,7 @@ const Canvas = (props: {
   useInterval(() => {
     if (c[0] < -2) {
       setDirection(1);
-    } else if (c[0] > -1) {
+    } else if (c[0] > -1.2) {
       setDirection(-1);
     }
     setC([c[0] + direction * 0.0002, c[1] - direction * 0.00002]);
