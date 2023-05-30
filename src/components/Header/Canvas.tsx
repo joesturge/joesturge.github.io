@@ -1,16 +1,23 @@
 import JuliaSet from "julia-set";
-import { createRef, useCallback, useEffect, useState } from "react";
+import { createRef, useEffect, useState } from "react";
 import { useInterval, useWindowSize } from "react-use";
 
 const FRAMERATE = 60;
 
+const INITIAL_C: [number, number] = [-1.9, 0.01];
+
+const codeFrom = (c: number[]) =>
+  `z * z + ${c[0].toFixed(6)}i${c[1].toFixed(6)}`;
+
 const Canvas = (props: {
   palette: ([number, number, number] | [number, number, number, number])[];
 }) => {
-  const [c, setC] = useState([-1.9, 0.01]);
-  const [direction, setDirection] = useState(1);
 
-  /** 
+  const [c, setC] = useState<[number, number]>(INITIAL_C);
+  const [direction, setDirection] = useState<number>(1);
+  const [juliaSet, setJuliaSet] = useState<JuliaSet | null>(null);
+
+  /**
    * Set the animation parameters for the julia fractal
    */
   useInterval(() => {
@@ -29,26 +36,45 @@ const Canvas = (props: {
 
   const canvas = createRef<HTMLCanvasElement>();
 
-  const render = useCallback(
-    (c: number[]) => {
-      if (canvas.current) {
-        canvas.current.height = canvas.current.clientHeight;
-        canvas.current.width = canvas.current.clientWidth;
-
+  /** 
+   * Initialize the julia fractal canvas
+   */
+  useEffect(() => {
+    if (canvas.current) {
+      setJuliaSet(
         JuliaSet.render(canvas.current, {
-          code: `z * z + ${c[0].toFixed(6)}i${c[1].toFixed(6)}`,
-          palette: props.palette,
+          code: codeFrom(INITIAL_C),
           height: 0.03,
           center: [-1, 0],
           iterations: 30,
           runawayDistance: 4,
-        });
-      }
-    },
-    [canvas, props.palette]
+        })
+      );
+    }
+  }, [canvas]);
+
+  /** 
+   * adjust the window size of the canvas if the page changes size
+   */
+  useEffect(() => {
+    if (canvas.current) {
+      canvas.current.height = canvas.current.clientHeight;
+      canvas.current.width = canvas.current.clientWidth;
+    }
+  }, [canvas, windowSize]);
+
+  /** 
+   * update the color scheme if the palette prop changes
+   */
+  useEffect(
+    () => juliaSet?.update({ palette: props.palette }),
+    [juliaSet, props.palette]
   );
 
-  useEffect(() => render(c), [c, render, windowSize]);
+  /** 
+   * Update the fractal if the constant changes
+   */
+  useEffect(() => juliaSet?.update({ code: codeFrom(c) }), [juliaSet, c]);
 
   return (
     <canvas
