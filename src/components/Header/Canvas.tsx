@@ -40,7 +40,7 @@ const Canvas = (props: {
    * Initialize the julia fractal canvas
    */
   useEffect(() => {
-    if (canvas.current) {
+    if (canvas.current && juliaSet === null) {
       setJuliaSet(
         JuliaSet.render(canvas.current, {
           code: codeFrom(INITIAL_C),
@@ -51,7 +51,7 @@ const Canvas = (props: {
         })
       );
     }
-  }, [canvas]);
+  }, [canvas, juliaSet]);
 
   /**
    * adjust the window size of the canvas if the page changes size
@@ -71,7 +71,7 @@ const Canvas = (props: {
       if (frame === null && juliaSet !== null) {
         setFrame(
           new Promise<void>((resolve) => {
-            juliaSet?.update(options);
+            juliaSet.update(options);
             resolve();
           })
             .then(() => setFrame(null))
