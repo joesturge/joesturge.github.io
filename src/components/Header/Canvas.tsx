@@ -1,57 +1,59 @@
 import JuliaSet, { Options } from "julia-set";
-import { createRef, useCallback, useEffect, useState } from "react";
+import { createRef, useCallback, useEffect, useRef } from "react";
 import { useInterval, useWindowSize } from "react-use";
 
 const FRAMERATE = 60;
 
 const INITIAL_C: [number, number] = [-1.9, 0.01];
 
-const codeFrom = (c: number[]) =>
+const codeFrom = (c: [number, number]) =>
   `z * z + ${c[0].toFixed(6)}i${c[1].toFixed(6)}`;
 
 const Canvas = (props: {
   palette: ([number, number, number] | [number, number, number, number])[];
 }) => {
-  const [c, setC] = useState<[number, number]>(INITIAL_C);
-  const [direction, setDirection] = useState<number>(1);
-  const [juliaSet, setJuliaSet] = useState<JuliaSet | null>(null);
-  const [frame, setFrame] = useState<Promise<void> | null>(null);
+  const canvas = createRef<HTMLCanvasElement>();
+  const c = useRef<[number, number]>(INITIAL_C);
+  const direction = useRef<number>(1);
+  const juliaSet = useRef<JuliaSet | null>(null);
+  const frame = useRef<Promise<void> | null>(null);
 
   /**
    * Set the animation parameters for the julia fractal
    */
   useInterval(() => {
-    if (c[0] < -2) {
-      setDirection(1);
-    } else if (c[0] > -1.2) {
-      setDirection(-1);
+    if (c.current[0] < -2) {
+      direction.current = 1;
+    } else if (c.current[0] > -1.2) {
+      direction.current = -1;
     }
-    setC([c[0] + direction * 0.0002, c[1] - direction * 0.00002]);
+    c.current = [
+      c.current[0] + direction.current * 0.0002,
+      c.current[1] - direction.current * 0.00002,
+    ];
+
+    safelyUpdate({ code: codeFrom(c.current), palette: props.palette });
   }, 1000 / FRAMERATE);
-
-  /**
-   * Normalize the aspect ratio of the canvas on window size update
-   */
-  const windowSize = useWindowSize();
-
-  const canvas = createRef<HTMLCanvasElement>();
 
   /**
    * Initialize the julia fractal canvas
    */
   useEffect(() => {
-    if (canvas.current && juliaSet === null) {
-      setJuliaSet(
-        JuliaSet.render(canvas.current, {
-          code: codeFrom(INITIAL_C),
-          height: 0.03,
-          center: [-1, 0],
-          iterations: 30,
-          runawayDistance: 4,
-        })
-      );
+    if (canvas.current && juliaSet.current === null) {
+      juliaSet.current = JuliaSet.render(canvas.current, {
+        code: codeFrom(INITIAL_C),
+        height: 0.03,
+        center: [-1, 0],
+        iterations: 30,
+        runawayDistance: 4,
+      });
     }
   }, [canvas, juliaSet]);
+
+  /**
+   * Normalize the aspect ratio of the canvas on window size update
+   */
+  const windowSize = useWindowSize();
 
   /**
    * adjust the window size of the canvas if the page changes size
@@ -68,29 +70,23 @@ const Canvas = (props: {
    */
   const safelyUpdate = useCallback(
     (options: Partial<Omit<Options, "antialias">>) => {
-      if (frame === null && juliaSet !== null) {
-        setFrame(
-          new Promise<void>((resolve) => {
-            juliaSet.update(options);
-            resolve();
+      if (frame.current === null && juliaSet.current !== null) {
+        frame.current = new Promise<void>((resolve) => {
+          juliaSet.current?.update(options);
+          resolve();
+        })
+          .then(() => {
+            frame.current = null;
+            return;
           })
-            .then(() => setFrame(null))
-            .catch(e => {
-              console.error("could not render julia set.", e);
-              setFrame(null);
-            })
-        );
+          .catch((e) => {
+            console.error("could not render julia set.", e);
+            frame.current = null;
+            return;
+          });
       }
     },
     [frame, juliaSet]
-  );
-
-  /**
-   * Update the fractal if the constant changes
-   */
-  useEffect(
-    () => safelyUpdate({ code: codeFrom(c), palette: props.palette }),
-    [c, props.palette, safelyUpdate]
   );
 
   return (
