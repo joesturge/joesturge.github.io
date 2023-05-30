@@ -69,21 +69,16 @@ const Canvas = (props: {
    * Update the julia set only if another update is not already in progress
    */
   const safelyUpdate = useCallback(
-    (options: Partial<Omit<Options, "antialias">>) => {
+    (options: Partial<Options>) => {
       if (frame.current === null && juliaSet.current !== null) {
         frame.current = new Promise<void>((resolve) => {
           juliaSet.current?.update(options);
           resolve();
         })
-          .then(() => {
-            frame.current = null;
-            return;
-          })
           .catch((e) => {
             console.error("could not render julia set.", e);
-            frame.current = null;
-            return;
-          });
+          })
+          .finally(() => frame.current = null);
       }
     },
     [frame, juliaSet]
