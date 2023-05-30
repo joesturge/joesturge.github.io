@@ -1,5 +1,5 @@
-import JuliaSet from "julia-set";
-import { createRef, useEffect, useState } from "react";
+import JuliaSet, { Options } from "julia-set";
+import { createRef, useCallback, useEffect, useState } from "react";
 import { useInterval, useWindowSize } from "react-use";
 
 const FRAMERATE = 60;
@@ -12,10 +12,10 @@ const codeFrom = (c: number[]) =>
 const Canvas = (props: {
   palette: ([number, number, number] | [number, number, number, number])[];
 }) => {
-
   const [c, setC] = useState<[number, number]>(INITIAL_C);
   const [direction, setDirection] = useState<number>(1);
   const [juliaSet, setJuliaSet] = useState<JuliaSet | null>(null);
+  const [frame, setFrame] = useState<Promise<void> | null>(null);
 
   /**
    * Set the animation parameters for the julia fractal
@@ -36,7 +36,7 @@ const Canvas = (props: {
 
   const canvas = createRef<HTMLCanvasElement>();
 
-  /** 
+  /**
    * Initialize the julia fractal canvas
    */
   useEffect(() => {
@@ -53,7 +53,7 @@ const Canvas = (props: {
     }
   }, [canvas]);
 
-  /** 
+  /**
    * adjust the window size of the canvas if the page changes size
    */
   useEffect(() => {
@@ -63,18 +63,35 @@ const Canvas = (props: {
     }
   }, [canvas, windowSize]);
 
-  /** 
-   * update the color scheme if the palette prop changes
+  /**
+   * Update the julia set only if another update is not already in progress
    */
-  useEffect(
-    () => juliaSet?.update({ palette: props.palette }),
-    [juliaSet, props.palette]
+  const safelyUpdate = useCallback(
+    (options: Partial<Omit<Options, "antialias">>) => {
+      if (frame === null && juliaSet !== null) {
+        setFrame(
+          new Promise<void>((resolve) => {
+            juliaSet?.update(options);
+            resolve();
+          })
+            .then(() => setFrame(null))
+            .catch(e => {
+              console.error("could not render julia set.", e);
+              setFrame(null);
+            })
+        );
+      }
+    },
+    [frame, juliaSet]
   );
 
-  /** 
+  /**
    * Update the fractal if the constant changes
    */
-  useEffect(() => juliaSet?.update({ code: codeFrom(c) }), [juliaSet, c]);
+  useEffect(
+    () => safelyUpdate({ code: codeFrom(c), palette: props.palette }),
+    [c, props.palette, safelyUpdate]
+  );
 
   return (
     <canvas
