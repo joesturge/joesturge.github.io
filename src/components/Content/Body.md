@@ -16,13 +16,14 @@ Check out my socials above!
 ### Soft Skills
 
 - Mentoring
-- Technical Leadership
+- Technical leadership
+- Line management
 - Scrum
 - Agile
 
 ### Hobbies
 
-- 3D Printing
+- 3D printing
 - Camping
 - Hosting minecraft servers
 
