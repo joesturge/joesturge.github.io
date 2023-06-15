@@ -3,7 +3,7 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Header from "./components/Header";
 import Content from "./components/Content";
 import { MDXProvider } from "@mdx-js/react";
-import components from "./components/MDX";
+import components from "mui-mdx-components";
 
 const header = {
   textDecoration: "underline",
@@ -38,10 +38,19 @@ const theme = createTheme({
   },
 });
 
+const options = {
+  propOverrides: {
+    em: {
+      color: "secondary",
+      component: "span"
+    }
+  }
+};
+
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <MDXProvider components={components}>
+      <MDXProvider components={components(options)}>
         <CssBaseline />
         <Header title="dev.joesturge.com" />
         <Content />
