@@ -3,7 +3,7 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Header from "./components/Header";
 import Content from "./components/Content";
 import { MDXProvider } from "@mdx-js/react";
-import components from "mui-mdx-components";
+import components, { MuiMdxComponentsOptions } from "mui-mdx-components";
 
 const header = {
   textDecoration: "underline",
@@ -38,7 +38,7 @@ const theme = createTheme({
   },
 });
 
-const options = {
+const options: MuiMdxComponentsOptions = {
   propOverrides: {
     em: {
       color: "secondary",
