@@ -6,8 +6,9 @@
   "scripts": {
     "dev": "vite --host",
     "build": "tsc && vite build",
+    "test": "echo \"Warn: no test specified\"",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview --host"
   },
   "dependencies": {
     "@emotion/react": "^11.11.0",
