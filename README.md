@@ -2,7 +2,7 @@
 
 To add a new post do the following:
 
-```
+```bash
 hugo new post/my-new-post/index.md
 ```
 
