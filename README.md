@@ -30,7 +30,11 @@ In case you don't want to use GitHub codespace, you can also run this template i
 
 ## Adding content
 
+To add a new post do the following:
 
+```
+hugo new post/my-new-post/index.md
+```
 
 ## Update theme manually
 
