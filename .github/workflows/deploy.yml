@@ -37,7 +37,15 @@ jobs:
           path: public/
           retention-days: 1
 
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+      pages: write
+    needs: build
+    environment: github-pages
+
+    steps: 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@13b55b33dd8996121833dbc1db458c793a334630 # v3.0.1
-        with:
-          artifact_name: github-pages
