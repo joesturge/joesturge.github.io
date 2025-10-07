@@ -28,6 +28,10 @@ It comes with a basic theme structure and configuration. GitHub action has been 
 
 In case you don't want to use GitHub codespace, you can also run this template in your local machine. **You need to install Git, Go and Hugo extended locally.**
 
+## Adding content
+
+
+
 ## Update theme manually
 
 Run:

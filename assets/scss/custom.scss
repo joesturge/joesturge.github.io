@@ -1,3 +1,147 @@
-/*
-    You can add your own custom styles here.
-*/
+$defaultTagBackgrounds: #7d8471, #8b5a6b, #6b7a8b, #8b7a5a, #5a6b8b;
+$defaultTagColors: #fff, #fff, #fff, #fff, #fff;
+
+:root {
+  --accent-color: #5c6352;
+  --accent-color-darker: #4a5142;
+  --accent-color-text: #fff;
+  --body-background: #f7f5f0;
+  --body-text-color: #2d2a24;
+  --card-text-color-main: #1f1c17;
+  --card-text-color-secondary: #3a352c;
+  --card-text-color-tertiary: #4d4640;
+  --link-background-color: 125, 132, 113;
+  --heading-border-size: 4px;
+
+  &[data-scheme="dark"] {
+    --accent-color: #a39b7a;
+    --accent-color-darker: #8a8060;
+    --accent-color-text: #000;
+    --body-background: #2a2825;
+    --body-text-color: rgba(220, 215, 200, 0.8);
+    --card-text-color-main: rgba(240, 235, 220, 0.95);
+    --card-text-color-secondary: rgba(200, 195, 180, 0.8);
+    --card-text-color-tertiary: rgba(180, 175, 160, 0.7);
+    --card-background: #3a3530;
+    --card-background-selected: rgba(163, 155, 122, 0.16);
+  }
+}
+
+:root {
+  --card-background: #fcfaf5;
+  --card-background-selected: #f0ede4;
+  --card-separator-color: rgba(125, 132, 113, 0.15);
+  --blockquote-background-color: #f1ede2;
+  --blockquote-border-size: 4px;
+  --shadow-l1: 0px 4px 8px rgba(92, 99, 82, 0.08), 0px 0px 2px rgba(92, 99, 82, 0.06), 0px 0px 1px rgba(92, 99, 82, 0.04);
+  --shadow-l2: 0px 10px 20px rgba(92, 99, 82, 0.06), 0px 2px 6px rgba(92, 99, 82, 0.04), 0px 0px 1px rgba(92, 99, 82, 0.04);
+  --code-text-color: #2d332a;
+  --code-background-color: rgba(125, 132, 113, 0.08);
+  --table-border-color: #c4bfa8;
+  --tr-even-background-color: #f5f2ea;
+  --scrollbar-thumb: rgba(125, 132, 113, 0.3);
+  --scrollbar-track: var(--body-background);
+  
+  &[data-scheme="dark"] {
+    --card-background: #3a3530;
+    --card-background-selected: rgba(163, 155, 122, 0.16);
+    --blockquote-background-color: #45413a;
+    --code-text-color: #a39b7a;
+    --code-background-color: rgba(163, 155, 122, 0.15);
+    --table-border-color: #8a8060;
+    --tr-even-background-color: #3f3b34;
+  }
+}
+
+.article-details .article-title a:hover {
+  color: var(--accent-color) !important;
+}
+
+.menu a:hover {
+  color: var(--accent-color) !important;
+}
+
+.article-content {
+  color: var(--body-text-color);
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--card-text-color-main);
+  }
+  
+  p, li {
+    color: var(--body-text-color);
+  }
+  
+  a {
+    color: var(--accent-color);
+    
+    &:hover {
+      color: var(--accent-color-darker);
+    }
+  }
+}
+
+.article-meta {
+  color: var(--card-text-color-secondary) !important;
+}
+
+.article-list article:nth-child(5n+1) .article-category a {
+  background: #7d8471;
+  color: #fff;
+}
+
+.article-list article:nth-child(5n+2) .article-category a {
+  background: #8b5a6b;
+  color: #fff;
+}
+
+.article-list article:nth-child(5n+3) .article-category a {
+  background: #6b7a8b;
+  color: #fff;
+}
+
+.article-list article:nth-child(5n+4) .article-category a {
+  background: #8b7a5a;
+  color: #fff;
+}
+
+.article-list article:nth-child(5n+5) .article-category a {
+  background: #5a6b8b;
+  color: #fff;
+}
+
+body[data-scheme="light"] {
+  background: linear-gradient(135deg, #f7f5f0 0%, #f9f6f1 50%, #f5f2ed 100%);
+  
+  .main-header {
+    background: rgba(252, 250, 245, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(125, 132, 113, 0.1);
+  }
+  
+  .article-list--tile .article-card,
+  .widget {
+    background: var(--card-background);
+    border: 1px solid rgba(125, 132, 113, 0.08);
+    box-shadow: var(--shadow-l1);
+    transition: all 0.3s ease;
+    
+    &:hover {
+      box-shadow: var(--shadow-l2);
+      transform: translateY(-2px);
+      border-color: rgba(125, 132, 113, 0.15);
+    }
+  }
+  
+  .button {
+    background: var(--accent-color);
+    color: var(--accent-color-text);
+    border: 1px solid var(--accent-color-darker);
+    
+    &:hover {
+      background: var(--accent-color-darker);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 8px rgba(92, 99, 82, 0.2);
+    }
+  }
+}
