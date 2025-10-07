@@ -53,6 +53,7 @@ jobs:
       id-token: write
       pages: write
     needs: build
+    environment: github-pages
 
     steps: 
       - name: Deploy to GitHub Pages
