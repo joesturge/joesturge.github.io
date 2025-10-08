@@ -55,7 +55,7 @@ The easy way is to create your public site bundle (HTML, CSS, JS) in a zip file 
 
 ## The hard way
 
-The hard way is use Cloudflares [GitHub application](https://developers.cloudflare.com/pages/configuration/git-integration/github-integration/) But im not going to teach you how to do that, personally I could not get it work properly, i leave that as an exercise to the reader. I would recommend the better easy way.
+The hard way is use Cloudflares [GitHub application](https://developers.cloudflare.com/pages/configuration/git-integration/github-integration/) but im not going to teach you how to do that, personally I could not get it work properly, I'll leave that as an exercise to the reader. I would recommend the better easy way.
 
 ## The better easy way (otherwise known as the hard way)
 
