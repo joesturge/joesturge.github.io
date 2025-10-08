@@ -11,7 +11,7 @@ draft: false
 tags:
   - github-actions
   - cloudflare
-  - ci-cd
+  - CI/CD
   - automation
 categories:
   - devops
