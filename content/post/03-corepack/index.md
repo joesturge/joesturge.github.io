@@ -58,4 +58,4 @@ It's as easy as that.
 
 # Future Excerice
 
-Why not write a Github action to install, build and test, package, publish a project but be package manager agnostic?
+Why not write a Github action to install, build, test, package and publish a project but be package manager agnostic?
