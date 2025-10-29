@@ -12,7 +12,7 @@ tags:
   - npm
   - pnpm
   - yarn
-  - coepack
+  - corepack
   - package
 categories:
   - development
@@ -20,7 +20,7 @@ categories:
 
 Corepack is the package manager for your package manager. If you cannot decide between npm, yarn or pnpm then this might be for you.
 
-Corepack is bundled with Node (19+); it adds metadata to your package.json file to tell CI and engineers which package manager you should be using.
+Corepack is bundled with Node (19+). It adds metadata to your package.json file to tell CI and engineers which package manager you should be using.
 
 # Prerequisites
 It is recommended, although not mandatory, (your mileage may vary) that you uninstall pnpm and yarn before proceeding.
