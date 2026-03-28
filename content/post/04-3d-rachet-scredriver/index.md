@@ -106,3 +106,5 @@ eleventh iteration: winging it, will it fly?
 
 twleth iterationL what is this a screwdriver?
   - I went ahead and designed the rest of the owl around this mechanism design, im writing this as I wait to see if it is going to work
+  - It slightly worked, I made the teeth 5 mm high instead of 10 mm high which was in my workign prototype, and also the notch for the ractch locatioor was too tight
+  - more sharpie on the 3d print is required lol
