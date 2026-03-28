@@ -107,3 +107,8 @@ I went ahead and designed the rest of the tool around this mechanism. It sort of
 After some destructive investigation (insert image), it turned out the thing stopping the direction switch from working was asymmetry. I need to actuate the reverse switch from both sides, as the slider has too much friction when positioned inside a case.
 
 <!-- IMAGE: Destructive investigation and final prototype -->
+
+# 13
+
+- I made a mistake and accidently fused the handle with the chuck, so i ended up making a regular screwdriver, i nearly busted  my hand trying to make it ractchet, im silly...
+- aldo the notches were proving problematic for the sliding gear change mechnism, i need to make it smoother and eaider to actualt, I can only do it with a hammer atm ...
