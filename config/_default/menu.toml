@@ -22,3 +22,11 @@ url = "https://www.linkedin.com/in/joseph-sturgeon-99463118b"
 
 [social.params]
 icon = "brand-linkedin"
+
+[[social]]
+identifier = "bymeacoffee"
+name = "ByMeACoffee"
+url = "https://buymeacoffee.com/joesturge"
+
+[social.params]
+icon = "brand-buymeacoffee"
