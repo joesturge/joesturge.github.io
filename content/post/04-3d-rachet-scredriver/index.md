@@ -72,6 +72,7 @@ Fourth iteration: Well thats the hard bit solved... not. (this is onshape v2 as 
 fifth iteration: well that kinda worked, now let me ruin evrything
   - this version has more teeth but they were smaller
   - the teeth did not print properly
+  - atlease it looked like a lightsaber, so there is that (pic of lightsabre like design)
   - this is when i discovered that you need to support the layers above durr.
 
 sixth iteration: angled teeth for the win!
