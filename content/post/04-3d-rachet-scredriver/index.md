@@ -26,87 +26,84 @@ So I look on all the usual 3D model websites to see if I can find something I li
 But I could not find anything I liked the look of, so instead of spending 15 quid on a decent Xiaomi ratchet, which I probably should have just done, I decided;
 well screw it, I'm gonna make my own, how hard can it be?
 
-# Design and Design again
+# Design and Design Again
 
+Before I started designing, I set myself a few ground rules. The screwdriver had to accept a regular hex bit, be fully 3D printed, and, because I clearly enjoy making things difficult for myself, be print-in-place. Oh, and it had to ratchet in both directions and lock, otherwise what’s the point?
 
-# Notes
+## Research: Inspiration and Delusion
 
-explain the requirements:
+Like any good maker, I started by trawling the internet for inspiration. I checked out the [Mi 16-in-1 Ratchet Screwdriver](https://www.mi.com/uk/product/mi-16-in-1-ratchet-screwdriver/), some classic Draper Redline models, and a bunch of ratchet mechanism diagrams. After a while, I’d seen enough pictures to convince myself this would be easy. (Spoiler: it wasn’t.)
 
-- must accept a regular hex bit
-- must be fully 3d printed
-- must be print in place because i hate myself
-- must have a way to racthet in both directions, and also lock
+## Iteration 1: The Spiral Chuck
 
-research
+My first goal was to make the screwdriver accept a standard 6.35mm hex bit. Most designs use a little magnet, but I wanted to use what I already had, two drills, loads of bits, but not a single ratchet. I started by meticulously modelling the hex bit (classic bikeshedding), then designed a spiral-shaped bit retainer. It was a bit overengineered, but it actually worked! 
 
-- include source material:
-  - https://www.mi.com/uk/product/mi-16-in-1-ratchet-screwdriver/
-  - draper-redline image
-  - reference mechanism
-- right ive seen enough pics, how hard can it be?
+<!-- IMAGE: Spiral chuck design and printed version -->
 
+## Iteration 2: Shrinking the Chuck
 
-First iteration: I wanted the screwdriver to accept a standard 6mm hex adapter (pic of 3d design of spiral thing and the printed version next to it)
-  - I've seen alot of other design rely on a small magnet insert, but I wanted to use things I already had, funnily enough, I have two drill and tonnes of bits, but not a single ratchet
-  - I started by designing the chuck as i originally thougt that would be that hardest part
-  - ( insert picture of my metricually modelling a 6.35mm hex bit - explain bikeshedding...)
-  - then designing a complex spiral shaped bit retainer, it works, if a little overengieerd, this design did last a while through the iterations.
+Feeling confident, I made the end a bit smaller. Surely I’d solved the hardest problem? How wrong I was. 
 
-Second iteration: Made the end bit a bit smaller (pic of 3d design of smaller chuck and the printed version next to it)
-  - Was still conviced that by now I have solved the hardest problems, how wrong I was
+<!-- IMAGE: Smaller chuck design and print -->
 
-Third iteration: Was still a bit too big so made chuck smaller, this instantly broke things
-  - explain how zac freidmand of gridfinity fame explained how it is okay to throw away and scribble all over old prints
+## Iteration 3: The Breakage
 
-Fourth iteration: Well thats the hard bit solved... not. (this is onshape v2 as here I actually started using the versioning feature in onshape, thank god i did)
-  - Made adjustments to the chuck to make the smaller form factor work - yay
-  - started work on the rachet
-  - this is hard
-  - explain how i had invisoned the design working (include pic of referecne rachet design i had in mind)
-  - stupid slidy thing
-  - this design did work, but only if i held very gently, and also it was super fragile
-  - show pic of onshap version
-  - optimistically included reverse ratchet
+Still too big, so I made the chuck even smaller. It instantly broke. Zac Freidman of Gridfinity fame says it’s okay to throw away and scribble all over old prints, wise words I took to heart.
 
-fifth iteration: well that kinda worked, now let me ruin evrything
-  - this version has more teeth but they were smaller
-  - the teeth did not print properly
-  - atlease it looked like a lightsaber, so there is that (pic of lightsabre like design)
-  - this is when i discovered that you need to support the layers above durr.
+<!-- IMAGE: Broken small chuck -->
 
-sixth iteration: angled teeth for the win!
-  - The teeth printed this time, all 20 of them
-  - but the rachet was still sub optimal, but that i mean the teeth printed too strong, the rachet held very well but in both directions...
-  - was borked
+## Iteration 4: The First Ratchet
 
-seventh iteration:
-  - reduced to 5 teeth, still did not work, even thoug it looked cool
+I thought the hard part was over. Nope. This is where I started using Onshape’s versioning feature (thank god I did). I made the chuck smaller, then started work on the ratchet. This was hard. I had a vision for how it would work (insert reference ratchet design image), and my first “slidy thing” design technically worked, but only if I held it very gently. It was super fragile. Still, I optimistically included a reverse ratchet.
 
-eighth iteration: time to scale up, obviously im making these too small
-  - looked again at the source image of the ratchet and realised that it was square, perhaps I shoud square my circle so to speak
-  - I really took my time with this iteration, not caring about the final screwdriver product just trying to figure out the mechanism
-  - mechanism firtst, scredriver later (this is a mindset i wish i took sooner)
-  - this mechanism was far to big, but this was the first iteration where the force i could apply was mega
-  - I actually was able to screw a screw with this iteration
-  - mega turing point, i now knew the geometry to aim for
+<!-- IMAGE: Onshape v2, fragile ratchet -->
 
-ninth iteration: clean slate
- - I deleted the entire project and started from scratch, this time i perfected the ratchet mechanis, this is the same geometry that i used in the final screwdriver
- - I miniaturised it to the max, only printing the minimal parts i needed to test if the mechnism worked
- - I went from 35mm outer diameter all the way down to 15, and it worked, but only just
+## Iteration 5: Lightsaber Vibes
 
-tenth iteration: slightly bigger
- - This was perfect, I just sclaed up the mini ratcet shape ever so slightly and it was perfect
- - I was still printed it flat on the bed though, print in place required thing to be float in mid air i was scared about that
+This version had more teeth, but they were smaller. The teeth didn’t print properly, but at least it looked like a lightsaber, so there’s that. (Insert lightsaber-like design image.) This is when I discovered you need to support the layers above... durr...
 
-eleventh iteration: winging it, will it fly?
-  - I added a gab on 0.3mm from the ratchet flap and the surface below it to see if i even needed to worry about support, it was fine
-  - this was another mega turning point
-  - this was the most compact and bi directional ratchet design yet
+<!-- IMAGE: Lightsaber-like failed print -->
 
-twleth iterationL what is this a screwdriver?
-  - I went ahead and designed the rest of the owl around this mechanism design, im writing this as I wait to see if it is going to work
-  - It slightly worked, I made the teeth 5 mm high instead of 10 mm high which was in my workign prototype, and also the notch for the ractch locatioor was too tight
-  - more sharpie on the 3d print is required lol
-  - after some destructive investiagtion (show pic) it turned out that the thing stopping the direction switch from working was assymetry, I need to actuate the reverse switch from both sides as the slider has too much friction when positioned inside a case
+## Iteration 6: Angled Teeth for the Win?
+
+I angled the teeth and, finally, they printed, all 20 of them! But the ratchet was still suboptimal. The teeth were too strong, so the ratchet held very well… in both directions. Borked.
+
+<!-- IMAGE: Angled teeth print -->
+
+## Iteration 7: The Cool Factor
+
+I reduced the number to 5 teeth. Still didn’t work, even though it looked cool.
+
+<!-- IMAGE: Five teeth version -->
+
+## Iteration 8: Scaling Up
+
+Time to scale up. I looked again at the source image and realized the ratchet was square. Maybe I should “square my circle,” so to speak. I really took my time with this iteration, not caring about the final screwdriver, just trying to figure out the mechanism. Mechanism first, screwdriver later (a mindset I wish I’d taken sooner). This mechanism was far too big, but for the first time, I could actually screw a screw with it. Mega "turning point" (Pun intended). I finally knew the geometry to aim for.
+
+<!-- IMAGE: Large square mechanism -->
+
+## Iteration 9: Clean Slate
+
+I deleted the entire project and started from scratch. This time, I perfected the ratchet mechanism, the same geometry I used in the final screwdriver. I miniaturized it to the max, only printing the minimal parts I needed to test if the mechanism worked. I went from 35mm outer diameter all the way down to 15mm, and it worked, but only just.
+
+<!-- IMAGE: Miniaturized ratchet test -->
+
+## Iteration 10: Slightly Bigger, Slightly Braver
+
+I just scaled up the mini ratchet shape ever so slightly and it was perfect. I was still printing it flat on the bed, though. Print-in-place required things to float in mid-air, and I was scared about that.
+
+<!-- IMAGE: Slightly larger ratchet -->
+
+## Iteration 11: Winging It
+
+I added a gap of 0.3mm from the ratchet flap to the surface below to see if I even needed to worry about support. It was fine! Another mega turning point. This was the most compact and bi-directional ratchet design yet.
+
+<!-- IMAGE: Print-in-place gap test -->
+
+## Iteration 12: What is this, a Screwdriver?
+
+I went ahead and designed the rest of the tool around this mechanism. It sort of worked, I made the teeth 5mm high instead of 10mm like in my working prototype so they broke... and the notch for the ratchet locator was too tight. More sharpie on the 3D print required, lol.
+
+After some destructive investigation (insert image), it turned out the thing stopping the direction switch from working was asymmetry. I need to actuate the reverse switch from both sides, as the slider has too much friction when positioned inside a case.
+
+<!-- IMAGE: Destructive investigation and final prototype -->
