@@ -123,7 +123,7 @@ After some destructive investigation (insert image), it turned out the thing sto
   - find link to video of using holes to strenthen walls, it really worked, the screwdriver is very strong now
   - use pic of slicer and the pic from the build plate mid print to show it in action
 
-# 15
+# 15 - it is beginning to look like a real product now...
 
 - i noticed that the rachet worked well in one direction, but was a little crunchy in the other direction
 - I think upon investigation that this was due to the bottom of the ratchet ring being deformed due to floating, so i added 10mm of meat at the top and the bottom of the racheet ring, this also has the double purpose of hiding the inner workings from the outside when you move the gear shift, two birds one stone
