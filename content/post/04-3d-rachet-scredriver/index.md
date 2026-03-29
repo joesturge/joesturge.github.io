@@ -112,3 +112,18 @@ After some destructive investigation (insert image), it turned out the thing sto
 
 - I made a mistake and accidently fused the handle with the chuck, so i ended up making a regular screwdriver, i nearly busted  my hand trying to make it ractchet, im silly...
 - aldo the notches were proving problematic for the sliding gear change mechnism, i need to make it smoother and eaider to actualt, I can only do it with a hammer atm ...
+
+# 14
+
+- I addressed the accidental fusing from the last version
+- I made the rachet height 10mm instead fo 7 so abck to the original size of the first working prototype
+- this version was the first version where evertything worked together
+  - the part seperated in the right way for the mechanisms to work perfectly
+- I also made pin holdes down the middle of the shaft to make it stronger
+  - find link to video of using holes to strenthen walls, it really worked, the screwdriver is very strong now
+  - use pic of slicer and the pic from the build plate mid print to show it in action
+
+# 15
+
+- i noticed that the rachet worked well in one direction, but was a little crunchy in the other direction
+- I think upon investigation that this was due to the bottom of the ratchet ring being deformed due to floating, so i added 10mm of meat at the top and the bottom of the racheet ring, this also has the double purpose of hiding the inner workings from the outside when you move the gear shift, two birds one stone
