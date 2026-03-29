@@ -125,5 +125,9 @@ After some destructive investigation (insert image), it turned out the thing sto
 
 # 15 - it is beginning to look like a real product now...
 
+- I made the rest of screwdriver, minus the proper chuck, just a 6.35mm hole for now, reinforced with pin holes ofcourse!
 - i noticed that the rachet worked well in one direction, but was a little crunchy in the other direction
 - I think upon investigation that this was due to the bottom of the ratchet ring being deformed due to floating, so i added 10mm of meat at the top and the bottom of the racheet ring, this also has the double purpose of hiding the inner workings from the outside when you move the gear shift, two birds one stone
+- however this version i made few mistakes including not leaving enough clearence for the hex bit and also the gear switcher was jammed due to an oversight in my geometry, darn.
+
+# 16 - 
