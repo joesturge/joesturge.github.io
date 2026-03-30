@@ -127,6 +127,7 @@ I also broke a hex bit inside the shaft at one point, which was less enjoyable t
 Then came the final pass, where I tightened tolerances, improved the handle shape, reduced internal play, removed the grip pattern and used fuzzy skin in the slicer instead (highly recommend this feature), and removed all floating geometry entirely.
 
 And that was it.
+![The finished product](04-finished-product.jpg)
 
 > Takeaway: A working mechanism is not the same as a good tool. The last 10% is all feel.
 
@@ -136,4 +137,5 @@ The key lessons from this project: prioritize mechanism first and always; scalin
 # Final Result
 
 Here's the finished screwdriver in action—fully functional, it ratchets smoothly, reverses reliably, locks securely, and most importantly, it didn't cost £15.
-![The finished product](04-finished-product.jpg)
+
+{{< video src="/video/ratchet-screwdriver.mp4" >}}
