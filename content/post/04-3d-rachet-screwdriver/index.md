@@ -53,11 +53,11 @@ All this research gave me a warm fuzzy feeling like this was going to be super e
 
 # Milestone 1 - Solving the Wrong Problem First
 
-I started with the chuck because, obviously, that would be the hardest part. My goal was to create something that accepted a standard 6.35mm hex bit without relying on magnets—mostly because I didn't have any magnets, though I do own multiple drills and a frankly excessive collection of bits. So naturally, instead of designing a screwdriver, I spent an embarrassing amount of time meticulously modelling a hex bit.
+I started with the chuck because, obviously, that would be the hardest part. My goal was to create something that accepted a standard 6.35mm hex bit without relying on magnets, mostly because I didn't have any magnets, though I do own multiple drills and a frankly excessive collection of bits. So naturally, instead of designing a screwdriver, I spent an embarrassing amount of time meticulously modelling a hex bit.
 
 ![Very accurate model of a hex bit](04-nicely-modelled-hex-bit.png)
 
-This detailed model became the reference to help me design the first real part of the screwdriver, a spiral retention mechanism designed to grip the bit, and while it worked, it was also completely overengineered for what I actually needed. I then spent several weeks making it smaller, breaking it, and making it slightly less small again—none of which mattered in the end since it survived the entire project anyway.
+This detailed model became the reference to help me design the first real part of the screwdriver, a spiral retention mechanism designed to grip the bit, and while it worked, it was also completely overengineered for what I actually needed. I then spent several weeks making it smaller, breaking it, and making it slightly less small again, none of which mattered in the end since it survived the entire project anyway.
 
 ![Spiral chuck design](04-spiral-chuck.jpg)
 
@@ -65,7 +65,7 @@ This detailed model became the reference to help me design the first real part o
 
 # Milestone 2 - Learning What a Ratchet Isn’t
 
-With the chuck "done", I moved on to the mechanism, which I assumed would be the easy part. I had a nice mental model in my head: sliding selector, ratchet pawl, job done. Except it wasn't. I built something that technically worked—as long as I handled it incredibly carefully with barely any pressure. It was fragile, inconsistent, and mostly just baffling.
+With the chuck "done", I moved on to the mechanism, which I assumed would be the easy part. I had a nice mental model in my head: sliding selector, ratchet pawl, job done. Except it wasn't. I built something that technically worked, as long as I handled it incredibly carefully with barely any pressure. It was fragile, inconsistent, and mostly just baffling.
 
 Then came the “teeth phase”:
 
@@ -83,7 +83,7 @@ At one point it looked like a lightsaber, which I’m counting as a win.
 
 At some point I realized I might just be making everything too small, so I scaled it up significantly and actually looked at my reference materials properly. That's when it clicked: the mechanism was square. I'd been stubbornly trying to force everything into a circular design, so I finally stopped fighting the reference and switched approaches.
 
-This version was massive, but it actually worked—and I mean really worked. I could genuinely drive a screw with it, which was the turning point that made me realize the entire project wasn't going to be a complete disaster.
+This version was massive, but it actually worked and I mean really worked. I could genuinely drive a screw with it, which was the turning point that made me realize the entire project wasn't going to be a complete disaster.
 
 ![Something that actually screws a screw in, just a bit janky!](04-something-that-actually-screws.jpg)
 
@@ -93,7 +93,7 @@ This version was massive, but it actually worked—and I mean really worked. I c
 
 Armed with a working mechanism, I did the sensible thing: I deleted everything and started over from scratch, but this time I prioritized the mechanism first. I aggressively miniaturized, scaling down from ~35mm to ~15mm and printing only the bare minimum needed to validate the design. It worked, though only barely, so I scaled it up slightly and found the stability I was looking for.
 
-Then came the scary part: making it fully print-in-place. With just a 0.3mm gap and no supports, I held my breath and printed it. And it worked. That was a significant moment—suddenly this thing might actually be printable in one go.
+Then came the scary part: making it fully print-in-place. With just a 0.3mm gap and no supports, I held my breath and printed it. And it worked. That was a significant moment, suddenly this thing might actually be printable in one go.
 
 ![Final ratchet CAD design (feel free to steal)](04-cad-drawing.png) ![Overhangs are fine if the gap is small](04-floating-geometry-ftw.jpg)
 
@@ -114,7 +114,7 @@ After extensive marking with Sharpies, breaking things, and staring at it until 
 ![Pin holes added the central ratchet shaft for strength](stronger-middle.png)
 ![As you can see it adds a lot more plastic in the areas where it is needed for strength without having to do any fancy slicing!](04-strength-pinholes.jpg)
 
-Eventually, it actually worked—and I mean properly worked.
+Eventually, it actually worked, and I mean properly worked.
 
 ![First working Bi directional prototype](04-first-working-bi-directional-prototype.jpg)
 ![Internal structure, its quite complicated!](04-interior-geometry.png)
@@ -138,6 +138,6 @@ Lessons Learned
 The key lessons from this project: prioritize mechanism first and always; scaling up is massively underrated; print-in-place is about tolerances, not magic; you will throw away a lot of plastic; Sharpies are essential engineering tools; symmetry matters more than you think; and overengineering is fun, but iteration wins.
 # Final Result
 
-Here's the finished screwdriver in action—fully functional, it ratchets smoothly, reverses reliably, locks securely, and most importantly, it didn't cost £15.
+Here's the finished screwdriver in action, fully functional, it ratchets smoothly, reverses reliably, locks securely, and most importantly, it didn't cost £15.
 
 {{< video src="/video/ratchet-screwdriver.mp4" >}}
