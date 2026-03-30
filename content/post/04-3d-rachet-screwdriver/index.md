@@ -126,8 +126,6 @@ Eventually, it actually worked—and I mean properly worked.
 
 Now that I had something functional, it was time to polish it and make it actually good. I started refining the design by fixing deformation that resulted from the print geometry, smoothing out the ratchet feel which had been good in one direction but frustratingly crunchy in the other, adjusting tooth height repeatedly, simplifying the chuck back to something very close to iteration 1 (funny how these things come full circle), and loosening the selector so it didn't require a hammer to operate.
 
-I also broke a hex bit inside the shaft at one point, which was less enjoyable than the rest of the process. But this is where it finally crossed the line from "prototype" to "actual tool".
-
 Then came the final pass, where I tightened tolerances, improved the handle shape, reduced internal play, removed the grip pattern and used fuzzy skin in the slicer instead (highly recommend this feature), and removed all floating geometry entirely.
 
 And that was it.
