@@ -26,6 +26,8 @@ So I look on all the usual 3D model websites to see if I can find something I li
 But I could not find anything I liked the look of, so instead of spending 15 quid on a decent Xiaomi ratchet, which I probably should have just done, I decided;
 well screw it, I'm gonna make my own, how hard can it be?
 
+> TLDR; Download from here: https://www.printables.com/model/1656899-print-in-place-bi-directional-ratchet-screwdriver
+
 # Design and Design Again
 
 I had a vague idea of what I wanted: something compact, satisfying to use, and ideally something that didn’t explode the first time I applied actual torque.
