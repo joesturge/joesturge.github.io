@@ -2,7 +2,7 @@
 title: "3D Print-in-Place - A Design Journey"
 description: Print in place 3D prints are very cool, so I decided to design and print a ratchet screwdriver.
 date: 2026-03-28T19:49:07Z
-image: 
+image: 04-lineup.jpg
 math: 
 license: 
 hidden: false
@@ -28,131 +28,112 @@ well screw it, I'm gonna make my own, how hard can it be?
 
 # Design and Design Again
 
-Before I started designing, I set myself a few ground rules. The screwdriver had to accept a regular hex bit, be fully 3D printed, and, because I clearly enjoy making things difficult for myself, be print-in-place. Oh, and it had to ratchet in both directions and lock, otherwise what’s the point?
+I had a vague idea of what I wanted: something compact, satisfying to use, and ideally something that didn’t explode the first time I applied actual torque.
+**Simple**.
+I had an idea of the requirements in my mind, but it is only after the project is complete that I am writing these down (note to future self on that one).
 
-## Research: Inspiration and Delusion
+- must accept a regular 6.35mm hex bit
+- must be fully 3D printed
+- must be print-in-place (because apparently I enjoy suffering)
+- and lastly, must ratchet in both directions, and also lock
 
-Like any good maker, I started by trawling the internet for inspiration. I checked out the [Mi 16-in-1 Ratchet Screwdriver](https://www.mi.com/uk/product/mi-16-in-1-ratchet-screwdriver/), some classic Draper Redline models, and a bunch of ratchet mechanism diagrams. After a while, I’d seen enough pictures to convince myself this would be easy. (Spoiler: it wasn’t.)
+Naturally, I then ignored how difficult that last one would be.
+This ended up taking about 30 test prints to get right!
+But having come out the other side of this mildly chaotic process, it is only now that I can retroactively pretend there were a few clear milestones along the way.
 
-## Iteration 1: The Spiral Chuck
+# Research (or: looking at pictures and pretending I understand them)
 
-My first goal was to make the screwdriver accept a standard 6.35mm hex bit. Most designs use a little magnet, but I wanted to use what I already had, two drills, loads of bits, but not a single ratchet. I started by meticulously modelling the hex bit (classic bikeshedding), then designed a spiral-shaped bit retainer. It was a bit overengineered, but it actually worked! 
+I started by studying existing designs:
 
-<!-- IMAGE: Spiral chuck design and printed version -->
+![Xiaomi’s beautifully engineered ratchet screwdriver](04-xaiomi.png)  ![A chunky Draper Redline for reference](04-draper-redline.jpg) ![Internal Ratchet mechanism](04-reference-mechanism.jpg)
 
-## Iteration 2: Shrinking the Chuck
+All this research gave me a warm fuzzy feeling like this was going to be super easy. How wrong I was.
 
-Feeling confident, I made the end a bit smaller. Surely I’d solved the hardest problem? How wrong I was. 
+# Milestone 1 - Solving the Wrong Problem First
 
-<!-- IMAGE: Smaller chuck design and print -->
+I started with the chuck because, obviously, that would be the hardest part. My goal was to create something that accepted a standard 6.35mm hex bit without relying on magnets—mostly because I didn't have any magnets, though I do own multiple drills and a frankly excessive collection of bits. So naturally, instead of designing a screwdriver, I spent an embarrassing amount of time meticulously modelling a hex bit.
 
-## Iteration 3: The Breakage
+![Very accurate model of a hex bit](04-nicely-modelled-hex-bit.png)
 
-Still too big, so I made the chuck even smaller. It instantly broke. Zac Freidman of Gridfinity fame says it’s okay to throw away and scribble all over old prints, wise words I took to heart.
+This detailed model became the basis of a spiral retention mechanism designed to grip the bit, and while it worked, it was also completely overengineered for what I actually needed. I then spent several weeks making it smaller, breaking it, and making it slightly less small again—none of which mattered in the end since it survived the entire project anyway.
 
-<!-- IMAGE: Broken small chuck -->
+> Takeaway: I solved the wrong problem first… but accidentally built something that survived the entire project.
 
-## Iteration 4: The First Ratchet
+# Milestone 2 - Learning What a Ratchet Isn’t
 
-I thought the hard part was over. Nope. This is where I started using Onshape’s versioning feature (thank god I did). I made the chuck smaller, then started work on the ratchet. This was hard. I had a vision for how it would work (insert reference ratchet design image), and my first “slidy thing” design technically worked, but only if I held it very gently. It was super fragile. Still, I optimistically included a reverse ratchet.
+With the chuck "done", I moved on to the mechanism, which I assumed would be the easy part. I had a nice mental model in my head: sliding selector, ratchet pawl, job done. Except it wasn't. I built something that technically worked—as long as I handled it incredibly carefully with barely any pressure. It was fragile, inconsistent, and mostly just baffling.
 
-<!-- IMAGE: Onshape v2, fragile ratchet -->
+Then came the “teeth phase”:
 
-## Iteration 5: Lightsaber Vibes
+- *more teeth* → didn’t print
+- *angled teeth* → printed perfectly, worked in both directions, but not vey strong.
+- *fewer teeth* → still wrong
 
-This version had more teeth, but they were smaller. The teeth didn’t print properly, but at least it looked like a lightsaber, so there’s that. (Insert lightsaber-like design image.) This is when I discovered you need to support the layers above... durr...
+At one point it looked like a lightsaber, which I’m counting as a win.
 
-<!-- IMAGE: Lightsaber-like failed print -->
+![Casually making a lightsabre](04-lightsabre.jpg)
 
-## Iteration 6: Angled Teeth for the Win?
+> Takeaway: I could make something that looked like a ratchet. Not something that behaved like one.
 
-I angled the teeth and, finally, they printed, all 20 of them! But the ratchet was still suboptimal. The teeth were too strong, so the ratchet held very well… in both directions. Borked.
+# Milestone 3 - The "Turning" Point
 
-<!-- IMAGE: Angled teeth print -->
+At some point I realized I might just be making everything too small, so I scaled it up significantly and actually looked at my reference materials properly. That's when it clicked: the mechanism was square. I'd been stubbornly trying to force everything into a circular design, so I finally stopped fighting the reference and switched approaches.
 
-## Iteration 7: The Cool Factor
+This version was massive, but it actually worked—and I mean really worked. I could genuinely drive a screw with it, which was the turning point that made me realize the entire project wasn't going to be a complete disaster.
 
-I reduced the number to 5 teeth. Still didn’t work, even though it looked cool.
+![Something that actually screws a screw in, just a bit janky!](04-something-that-actually-screws.jpg)
 
-<!-- IMAGE: Five teeth version -->
+> Takeaway: Stop forcing the design into what you think it should be. Follow what actually works.
 
-## Iteration 8: Scaling Up
+# Milestone 4 - Making It Small Again (Properly This Time)
 
-Time to scale up. I looked again at the source image and realized the ratchet was square. Maybe I should “square my circle,” so to speak. I really took my time with this iteration, not caring about the final screwdriver, just trying to figure out the mechanism. Mechanism first, screwdriver later (a mindset I wish I’d taken sooner). This mechanism was far too big, but for the first time, I could actually screw a screw with it. Mega "turning point" (Pun intended). I finally knew the geometry to aim for.
+Armed with a working mechanism, I did the sensible thing: I deleted everything and started over from scratch, but this time I prioritized the mechanism first. I aggressively miniaturized, scaling down from ~35mm to ~15mm and printing only the bare minimum needed to validate the design. It worked, though only barely, so I scaled it up slightly and found the stability I was looking for.
 
-<!-- IMAGE: Large square mechanism -->
+Then came the scary part: making it fully print-in-place. With just a 0.3mm gap and no supports, I held my breath and printed it. And it worked. That was a significant moment—suddenly this thing might actually be printable in one go.
 
-## Iteration 9: Clean Slate
+![Final ratchet CAD design (feel free to steal)](04-cad-drawing.png) ![Overhangs are fine if the gap is small](04-floating-geometry-ftw.jpg)
 
-I deleted the entire project and started from scratch. This time, I perfected the ratchet mechanism, the same geometry I used in the final screwdriver. I miniaturized it to the max, only printing the minimal parts I needed to test if the mechanism worked. I went from 35mm outer diameter all the way down to 15mm, and it worked, but only just.
+> Takeaway: Scaling down changes everything. Print-in-place is just tolerances (and a bit of courage).
 
-<!-- IMAGE: Miniaturized ratchet test -->
+# Milestone 5 - Turning It Into an Actual Screwdriver
 
-## Iteration 10: Slightly Bigger, Slightly Braver
+Until now, I'd only had a mechanism, but now I needed to turn it into an actual tool. So I wrapped a body around it, and everything immediately fell apart. The teeth that worked perfectly before suddenly didn't work, the selector got jammed, and friction became a real problem.
 
-I just scaled up the mini ratchet shape ever so slightly and it was perfect. I was still printing it flat on the bed, though. Print-in-place required things to float in mid-air, and I was scared about that.
+At one point I accidentally fused the handle to the shaft and created a completely solid screwdriver.
 
-<!-- IMAGE: Slightly larger ratchet -->
+I then nearly injured myself trying to ratchet it anyway.
 
-## Iteration 11: Winging It
+![What it looked like](04-fused-slider.jpg) ![What it should have looked like, note the tiny gap between the outer wall and the inner ring](04-not-fused.jpg) ![Destrictive investiagtion](04-destructive-testing.jpg) ![The culprit](04-fused-parts.png)
 
-I added a gap of 0.3mm from the ratchet flap to the surface below to see if I even needed to worry about support. It was fine! Another mega turning point. This was the most compact and bi-directional ratchet design yet.
+After extensive marking with Sharpies, breaking things, and staring at it until my eyes crossed, I finally identified the main issue: asymmetry. The selector needed to be actuated from both sides, otherwise friction would kill it completely once everything was enclosed. I also fixed clearances, stopped things from fusing together, and added internal pin holes for structural strength, which ended up working really well.
 
-<!-- IMAGE: Print-in-place gap test -->
+![Pin holes added the central ratchet shaft for strength](stronger-middle.png)
+![As you can see it adds alot more plastic in the areas where it is needed for strength without having to do any fancy slicing!](04-strength-pinholes.jpg)
 
-## Iteration 12: What is this, a Screwdriver?
+Eventually, it actually worked—and I mean properly worked.
 
-I went ahead and designed the rest of the tool around this mechanism. It sort of worked, I made the teeth 5mm high instead of 10mm like in my working prototype so they broke... and the notch for the ratchet locator was too tight. More sharpie on the 3D print required, lol.
+![First working Bi directional prototype](04-first-working-bi-directional-prototype.jpg)
+![Internal structure, its quite complicated!](04-interior-geometry.png)
+![Development of the handle geometry](04-handle-development.png)
 
-After some destructive investigation (insert image), it turned out the thing stopping the direction switch from working was asymmetry. I need to actuate the reverse switch from both sides, as the slider has too much friction when positioned inside a case.
+> Takeaway: Mechanisms behave very differently once you put them inside something.
 
-<!-- IMAGE: Destructive investigation and final prototype -->
+# Milestone 6 - From “Works” to “Actually Good”
 
-# Iteration 13: The Accidental Monolith
+Now that I had something functional, it was time to polish it and make it actually good. I started refining the design by fixing deformation that resulted from the print geometry, smoothing out the ratchet feel which had been good in one direction but frustratingly crunchy in the other, adjusting tooth height repeatedly, simplifying the chuck back to something very close to iteration 1 (funny how these things come full circle), and loosening the selector so it didn't require a hammer to operate.
 
-- Accidentally fused the handle with the chuck during design, resulting in a fixed (non-ratcheting) screwdriver
-- Learned that the slider notches were too tight for the gear-change mechanism—could only move it with a hammer
-- Even with these issues, the basic functionality held up, which was encouraging
+I also broke a hex bit inside the shaft at one point, which was less enjoyable than the rest of the process. But this is where it finally crossed the line from "prototype" to "actual tool".
 
-# Iteration 14: Finding the Sweet Spot
+Then came the final pass, where I tightened tolerances, improved the handle shape, reduced internal play, removed the grip pattern and used fuzzy skin in the slicer instead (highly recommend this feature), and removed all floating geometry entirely.
 
-- Separated the handle from the chuck properly so the mechanisms could work independently
-- Returned to 10mm ratchet teeth height (the original successful prototype size)
-- **First iteration where everything functioned together correctly**:
-  - Parts separated cleanly, allowing mechanisms to perform as designed
-- Added pin holes down the middle of the shaft for structural reinforcement
-  - This simple technique dramatically improved strength (reference hollow wall strengthening videos/techniques)
-  - The screwdriver became noticeably rigid despite the complex internal mechanisms
+And that was it.
 
-# Iteration 15: Building the Outer Form
+> Takeaway: A working mechanism is not the same as a good tool. The last 10% is all feel.
 
-- Added the complete external screwdriver body (except the final chuck design—used a simple 6.35mm hole for now, reinforced with pin holes)
-- Discovered directional asymmetry: ratchet worked smoothly in one direction but felt crunchy in reverse
-- Added 10mm reinforcement rings at the top and bottom of the ratchet mechanism to resolve two issues:
-  - Eliminated deformation of the floating ratchet ring
-  - Provided a clean aesthetic appearance when the gear shift was moved
-- **Issues found**: insufficient clearance for the hex bit, and gear shifter jamming from a geometry oversight
+Lessons Learned
 
-# Iteration 16: The First Complete Prototype
+The key lessons from this project: prioritize mechanism first and always; scaling up is massively underrated; print-in-place is about tolerances, not magic; you will throw away a lot of plastic; Sharpies are essential engineering tools; symmetry matters more than you think; and overengineering is fun, but iteration wins.
+# Final Result
 
-- Extended the outer handle all the way to the build plate to eliminate floating support sections in the slicer
-- Trade-off: The shaft interior lost a gripping surface, making disassembly difficult (could only extract by pushing with the hex bit)
-- This revealed a critical flaw: **the hex bit could shear inside the shaft under extraction force**
-- **First fully usable ratchet screwdriver**—comfortable to hold, proper proportions
-- Still tuning ratchet tooth height: 10mm provided good engagement but made the reverse direction feel sluggish
-
-# Iteration 17: Refining the Mechanism
-
-- Tested reducing ratchet teeth back to 5mm to find the optimal balance between engagement and smooth reverse action
-- Completely redesigned the hex bit chuck and retaining clip—interestingly, this simplified version echoed the original Iteration 1 design
-- Smoothed the slider gear shifter action; previous versions had unwanted friction and crunchiness
-- **Major milestone: Eliminated all floating parts in the slicer** for the first time, which should make extraction much easier
-- At this point, the mechanism geometry was fully dialed in and the design felt production-ready (for a homemade tool)
-- the chuck was a little too loose
-
-# Iteration 18: astectics and final usabilty tweaks (hopefully)
-
-- Made the hex chuck a touch tighter and bought in the chuck retaining spring slightly
-- Increased the clearence on the slider to make it stick less
-- improved the shape of the handle, and removed grip pattern (I used slicer settings to add texture to the face i want and will reccomend that in the final product)
-- improved the internal geometry for the slider to have less play
+Here's the finished screwdriver in action—fully functional, it ratchets smoothly, reverses reliably, locks securely, and most importantly, it didn't cost £15.
+![The finished product](04-finished-product.jpg)
