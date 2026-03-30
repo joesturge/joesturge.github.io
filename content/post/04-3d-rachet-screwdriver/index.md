@@ -75,6 +75,8 @@ Then came the “teeth phase”:
 
 At one point it looked like a lightsaber, which I’m counting as a win.
 
+I had been assuming more teeth automatically gave better strength, but the real failure mode was tooth flex and engagement length. Smaller, thicker pawls with 6mm height and a shorter lever performed far more reliably than a high-tooth-count, fragile ring.
+
 ![Casually making a lightsabre](04-lightsabre.jpg)
 
 > Takeaway: I could make something that looked like a ratchet. Not something that behaved like one.
@@ -136,8 +138,26 @@ And that was it.
 Lessons Learned
 
 The key lessons from this project: prioritize mechanism first and always; scaling up is massively underrated; print-in-place is about tolerances, not magic; you will throw away a lot of plastic; Sharpies are essential engineering tools; symmetry matters more than you think; and overengineering is fun, but iteration wins.
+
+# What I learned (numbers and rules)
+
+- Printer/material: Creality K2 Combo, PLA, 0.4mm nozzle, 0.2mm layer height (better overhang control for floating parts).
+- Clearances: 0.3mm for freely moving parts; 0.15mm for controlled friction surfaces.
+- Mechanism dims: final pawl thickness 6mm, initial ring mostly 32mm diameter in milestone 3 scaled to 22mm by milestone 4.
+- Design rule: tooth count is less important than tooth length and stiffness for torque transfer in 3D print-in-place ratchets.
+- Repeatable “why”: M1 was wrong starting focus, M2 was too many weak teeth versus enough strong teeth, M5 was pawl size tuning to avoid jamming when encased.
+
+> Quick advice:
+> - Pick a working mechanism and then miniaturize it (not vice versa).
+> - Print-in-place is about repeatable clearance, not _perfect_ CAD.
+> - When constrained by torque, prefer fewer, beefier pawls.
+
 # Final Result
 
 Here's the finished screwdriver in action, fully functional, it ratchets smoothly, reverses reliably, locks securely, and most importantly, it didn't cost £15.
+
+What I'd do next:
+- Print the same design in PETG to compare wear and torque resilience.
+- Perhaps add a place in the handle to store 6mm bits like in the examples I researched
 
 {{< video src="/video/ratchet-screwdriver.mp4" >}}
