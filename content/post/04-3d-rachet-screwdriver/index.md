@@ -68,7 +68,7 @@ With the chuck "done", I moved on to the mechanism, which I assumed would be the
 Then came the “teeth phase”:
 
 - *more teeth* → didn’t print
-- *angled teeth* → printed perfectly, worked in both directions, but not vey strong.
+- *angled teeth* → printed perfectly, worked in both directions, but not very strong.
 - *fewer teeth* → still wrong
 
 At one point it looked like a lightsaber, which I’m counting as a win.
@@ -105,12 +105,12 @@ At one point I accidentally fused the handle to the shaft and created a complete
 
 I then nearly injured myself trying to ratchet it anyway.
 
-![What it looked like](04-fused-slider.jpg) ![What it should have looked like, note the tiny gap between the outer wall and the inner ring](04-not-fused.jpg) ![Destrictive investiagtion](04-destructive-testing.jpg) ![The culprit](04-fused-parts.png)
+![What it looked like](04-fused-slider.jpg) ![What it should have looked like, note the tiny gap between the outer wall and the inner ring](04-not-fused.jpg) ![Destructive investiagtion](04-destructive-testing.jpg) ![The culprit](04-fused-parts.png)
 
 After extensive marking with Sharpies, breaking things, and staring at it until my eyes crossed, I finally identified the main issue: asymmetry. The selector needed to be actuated from both sides, otherwise friction would kill it completely once everything was enclosed. I also fixed clearances, stopped things from fusing together, and added internal pin holes for structural strength, which ended up working really well.
 
 ![Pin holes added the central ratchet shaft for strength](stronger-middle.png)
-![As you can see it adds alot more plastic in the areas where it is needed for strength without having to do any fancy slicing!](04-strength-pinholes.jpg)
+![As you can see it adds a lot more plastic in the areas where it is needed for strength without having to do any fancy slicing!](04-strength-pinholes.jpg)
 
 Eventually, it actually worked—and I mean properly worked.
 
