@@ -135,7 +135,7 @@ After some destructive investigation (insert image), it turned out the thing sto
 - I extended the outer handle part all the way to base of the print bed to reduce the required floating parts
 - It was harder to snap the interior out as i had to rely on the hex bit to provide the snapping force as there was nothing to grip onto the inside shaft now
 - This reveal another issue, where the hex bit sheered inside the shaft
-- But here is a picture of the first feasibly useable ratchet screwdriver
+- But here is a picture of the first feasibly useable ratchet screwdriver, i enevn made it shaped correctly, it is comfortable to use! (provide image)
 - The rachet is still a bit too strong, i keep changinging my mind on the height of the rachet teeth, this time was 10mm which provided good strength but the turn back force is a little too strong
 
 # 17
