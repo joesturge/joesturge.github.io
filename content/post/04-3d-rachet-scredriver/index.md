@@ -130,4 +130,15 @@ After some destructive investigation (insert image), it turned out the thing sto
 - I think upon investigation that this was due to the bottom of the ratchet ring being deformed due to floating, so i added 10mm of meat at the top and the bottom of the racheet ring, this also has the double purpose of hiding the inner workings from the outside when you move the gear shift, two birds one stone
 - however this version i made few mistakes including not leaving enough clearence for the hex bit and also the gear switcher was jammed due to an oversight in my geometry, darn.
 
-# 16 - 
+# 16 - First real complete screwdriver
+
+- I extended the outer handle part all the way to base of the print bed to reduce the required floating parts
+- It was harder to snap the interior out as i had to rely on the hex bit to provide the snapping force as there was nothing to grip onto the inside shaft now
+- This reveal another issue, where the hex bit sheered inside the shaft
+- But here is a picture of the first feasibly useable ratchet screwdriver
+- The rachet is still a bit too strong, i keep changinging my mind on the height of the rachet teeth, this time was 10mm which provided good strength but the turn back force is a little too strong
+
+# 17
+
+- now that i got mycentral shaft geometry figured out fully, I will try to go back to 5mm and see if that is strong enough now, if that fails ill go up to 7.5mm  then iterate to find the sweet spot
+- also in the next ite
