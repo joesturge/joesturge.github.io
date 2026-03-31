@@ -154,10 +154,7 @@ My printer settings and model information:
 - Mechanism dims: final pawl thickness 6mm, initial racthet ring was 32mm diameter in Milestone 3 but eventually scaled to 22mm by Milestone 4.
 - Design rule: tooth count is less important than tooth length and stiffness for torque transfer in 3D print-in-place ratchets.
 
-> Quick advice:
-> - Pick a working mechanism and then miniaturize it (not vice versa).
-> - Print-in-place is about repeatable clearance, not _perfect_ CAD.
-> - When constrained by torque, prefer fewer, beefier pawls.
+> Quick advice - Pick a working mechanism and then miniaturize it (not vice versa).
 
 # Final Result
 
