@@ -57,7 +57,7 @@ I started with the chuck because, obviously, that would be the hardest part. My 
 
 ![Very accurate model of a hex bit](04-nicely-modelled-hex-bit.png)
 
-This detailed model became the reference to help me design the first real part of the screwdriver, a spiral retention mechanism designed to grip the bit, and while it worked, it was also completely overengineered for what I actually needed. I then spent several weeks making it smaller, breaking it, and making it slightly less small again, none of which mattered in the end since it survived the entire project anyway.
+This detailed model became the reference to help me design the first real part of the screwdriver, a spiral retention mechanism designed to grip the bit, and while it worked, it was also completely overengineered for what I actually needed. I then spent several iterations making it smaller, breaking it, and making it slightly less small again, none of which mattered in the end since I didn't end up using this design in the final version.
 
 ![Spiral chuck design](04-spiral-chuck.jpg)
 
