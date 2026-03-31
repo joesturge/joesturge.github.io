@@ -75,7 +75,7 @@ Then came the “teeth phase”:
 
 At one point it looked like a lightsaber, which I’m counting as a win.
 
-I had been assuming more teeth automatically gave better strength, but the real failure mode was tooth flex and engagement length. Smaller, thicker pawls with 6mm height and a shorter lever performed far more reliably than a high-tooth-count, fragile ring.
+I had been assuming more teeth automatically gave better strength, but the real failure mode was tooth flex and engagement length.
 
 ![Casually making a lightsabre](04-lightsabre.jpg)
 
