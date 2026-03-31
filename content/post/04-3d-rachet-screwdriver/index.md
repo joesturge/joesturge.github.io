@@ -135,12 +135,20 @@ And that was it.
 
 > Takeaway: A working mechanism is not the same as a good tool. The last 10% is all feel.
 
-Lessons Learned
-
-The key lessons from this project: prioritize mechanism first and always; scaling up is massively underrated; print-in-place is about tolerances, not magic; you will throw away a lot of plastic; Sharpies are essential engineering tools; symmetry matters more than you think; and overengineering is fun, but iteration wins.
-
 # What I learned (numbers and rules)
 
+The key lessons from this project: 
+
+- prioritize mechanism first and always
+- scaling up is massively underrated
+- print-in-place is about tolerances, not magic
+- you will throw away a lot of plastic
+- Sharpies are essential engineering tools
+- overengineering is fun, but iteration wins
+
+My printer settings and model information:
+
+- Download final version here: https://www.printables.com/model/1656899-print-in-place-bi-directional-ratchet-screwdriver
 - Printer/material: Creality K2 Combo, PLA, 0.4mm nozzle, 0.2mm layer height (better overhang control for floating parts).
 - Clearances: 0.3mm for freely moving parts; 0.15mm for controlled friction surfaces.
 - Mechanism dims: final pawl thickness 6mm, initial racthet ring was 32mm diameter in Milestone 3 but eventually scaled to 22mm by Milestone 4.
