@@ -61,7 +61,7 @@ This detailed model became the reference to help me design the first real part o
 
 ![Spiral chuck design](04-spiral-chuck.jpg)
 
-> Takeaway: I solved the wrong problem first… but accidentally built something that survived the entire project.
+> Takeaway: Think about what is the hardest part of a project and do that first.
 
 # Milestone 2 - Learning What a Ratchet Isn’t
 
