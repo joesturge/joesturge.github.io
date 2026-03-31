@@ -126,7 +126,7 @@ Eventually, it actually worked, and I mean properly worked.
 
 # Milestone 6 - From “Works” to “Actually Good”
 
-Now that I had something functional, it was time to polish it and make it actually good. I started refining the design by fixing deformation that resulted from the print geometry, smoothing out the ratchet feel which had been good in one direction but frustratingly crunchy in the other, adjusting tooth height repeatedly, simplifying the chuck back to something very close to iteration 1 (funny how these things come full circle), and loosening the selector so it didn't require a hammer to operate.
+Now that I had something functional, it was time to polish it and make it actually good. I started refining the design by fixing deformation that resulted from the print geometry, smoothing out the ratchet feel which had been good in one direction but frustratingly crunchy in the other, adjusting tooth height repeatedly, simplifying the chuck back to something different but better than iteration 1 (it wasn't a waste of time, I just learnt more about how the material behaves since the first iteration), and loosening the selector so it didn't require a hammer to operate.
 
 Then came the final pass, where I tightened tolerances, improved the handle shape, reduced internal play, removed the grip pattern and used fuzzy skin in the slicer instead (highly recommend this feature), and removed all floating geometry entirely.
 
