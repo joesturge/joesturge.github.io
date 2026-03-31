@@ -143,9 +143,8 @@ The key lessons from this project: prioritize mechanism first and always; scalin
 
 - Printer/material: Creality K2 Combo, PLA, 0.4mm nozzle, 0.2mm layer height (better overhang control for floating parts).
 - Clearances: 0.3mm for freely moving parts; 0.15mm for controlled friction surfaces.
-- Mechanism dims: final pawl thickness 6mm, initial ring mostly 32mm diameter in milestone 3 scaled to 22mm by milestone 4.
+- Mechanism dims: final pawl thickness 6mm, initial racthet ring was 32mm diameter in Milestone 3 but eventually scaled to 22mm by Milestone 4.
 - Design rule: tooth count is less important than tooth length and stiffness for torque transfer in 3D print-in-place ratchets.
-- Repeatable “why”: M1 was wrong starting focus, M2 was too many weak teeth versus enough strong teeth, M5 was pawl size tuning to avoid jamming when encased.
 
 > Quick advice:
 > - Pick a working mechanism and then miniaturize it (not vice versa).
