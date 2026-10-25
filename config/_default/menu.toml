@@ -22,3 +22,11 @@ url = "https://www.linkedin.com/in/joseph-sturgeon-99463118b"
 
 [social.params]
 icon = "brand-linkedin"
+
+[[social]]
+identifier = "rss"
+name = "RSS feed"
+url = "/index.xml"
+
+[social.params]
+icon = "rss"
