@@ -16,6 +16,8 @@ hugo server -D
 
 The `-D` flag includes draft posts. Hugo prints the local address when the server starts, usually `http://localhost:1313/`.
 
+The Giscus theme CSS is served from the local Hugo server during development. The development config points Giscus at `localhost:1313` and adds the CORS header its iframe needs, so use the default port when previewing comments. Restart Hugo after changing the development server config.
+
 To check a production build:
 
 ```bash

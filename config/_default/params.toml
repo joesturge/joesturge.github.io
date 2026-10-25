@@ -133,8 +133,8 @@ repoID = "R_kgDOJiAzSg"
 category = "Blog comments"
 categoryID = "DIC_kwDOJiAzSs4DJlFa"
 mapping = "pathname"
-lightTheme = "light"
-darkTheme = "dark_dimmed"
+lightTheme = "https://dev.joesturge.com/giscus-light.css"
+darkTheme = "https://dev.joesturge.com/giscus-dark.css"
 reactionsEnabled = 1
 emitMetadata = 0
 

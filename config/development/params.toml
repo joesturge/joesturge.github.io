@@ -1,0 +1,3 @@
+[comments.giscus]
+lightTheme = "http://localhost:1313/giscus-light.css"
+darkTheme = "http://localhost:1313/giscus-dark.css"
