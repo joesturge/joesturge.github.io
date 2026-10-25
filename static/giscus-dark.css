@@ -10,10 +10,10 @@ main {
   --color-border-default: #696252;
   --color-border-muted: #514b40;
   --color-neutral-muted: rgb(245 241 230 / 16%);
-  --color-accent-fg: #e0d29a;
-  --color-accent-emphasis: #c5b77e;
-  --color-accent-muted: rgb(197 183 126 / 40%);
-  --color-accent-subtle: rgb(197 183 126 / 16%);
+  --color-accent-fg: #d7ca90;
+  --color-accent-emphasis: #b8ae7a;
+  --color-accent-muted: rgb(184 174 122 / 35%);
+  --color-accent-subtle: rgb(184 174 122 / 16%);
   --color-success-fg: #a4d2a0;
   --color-attention-fg: #e7c66e;
   --color-attention-muted: rgb(231 198 110 / 35%);
