@@ -89,24 +89,24 @@ Help maintain useful repository context incrementally as development reveals it.
 
 ## Assess and verify
 
-Consider an insight only when it is durable, non-obvious, repository-specific, and useful to future work. A recurring pattern can be a good signal, not a required threshold: capture an important finding sooner when justified. Ignore generic programming advice, standard technology facts, transient details, and one-off mistakes.
+Consider retaining insights that are durable, non-obvious, repository-specific, and useful to future work. Recurrence is a useful signal, not a threshold; ignore generic advice, transient details, and one-off mistakes.
 
-Before treating a finding as authoritative, check relevant source code, tests, configuration, and existing documentation where practical. Separate verified facts from assumptions, hypotheses, and open questions. If evidence is insufficient, state the uncertainty instead of presenting an inference as fact. Check for conflicting or stale guidance; correct it when the evidence makes the right outcome clear, otherwise report the conflict.
+Check relevant code, tests, configuration, and guidance where practical. Distinguish verified facts from uncertainty; resolve stale or conflicting guidance when evidence is clear, otherwise report the conflict.
 
-## Choose a destination
+## Choose a destination and format
 
-Inspect existing guidance and place useful knowledge in the narrowest suitable destination supported by the target tooling:
+Choose based on audience, timing, scope, existing sources of truth, and target-tool support:
 
-- Path-scoped instructions for rules limited to particular files or paths. Check that `applyTo` matches the intended files where practical.
-- Global instructions only for concise rules that genuinely apply across the repository.
-- Skills, prompts, or agents when their supported formats and discovery behavior suit the knowledge.
-- Project documentation for information intended for human contributors.
+- Use project documentation for human contributors; use AI guidance when an agent needs the information during relevant work.
+- Scope guidance to matching files when possible; use global instructions only for rules that apply across the repository. Use on-demand resources when their discovery and loading fit better.
+- Prefer the narrowest supported destination. Update or link to an existing source of truth only if the intended audience or agent can reliably discover and access it when needed; otherwise, capture the minimum necessary information in an appropriate, supported location.
+- Optimize useful guidance per token: keep automatically loaded instructions lean and place additional detail in on-demand resources when supported.
 
-Prefer updating or linking to an existing source of truth over duplicating guidance. Do not promote local implementation details into global instructions. Tooling formats, discovery, and loading differ; do not assume one tool will load another tool's customization files.
+Validate the actual target tool's format, schema, scope syntax, and discovery behavior before relying on them. Support varies by tool, host, and version; do not assume a field such as `applyTo` has one universal type or syntax.
 
 ## Make and report changes
 
-When the evidence and destination are clear and the change is low risk, edit the relevant workspace file directly. Preserve unrelated working-tree changes. Do not stage, commit, or push; an edit is a proposal in the working tree, not developer acceptance. Do not ask permission for every routine edit. For consequential ambiguity, such as establishing a broad architectural rule, explain the options and ask or propose before editing.
+When the evidence and destination are clear and the change is low risk, edit the relevant workspace file directly without asking permission for routine edits. For consequential ambiguity, explain the options and ask or propose before editing.
 
-Report what changed, why it is useful, and where it was placed. Distinguish files edited from sources inspected and behavior actually tested; do not claim verification merely because text was changed. If no durable improvement is justified, leave files unchanged and say so.
+Preserve unrelated working-tree changes. Edits are proposals for developer review: do not stage, commit, or push. Inspect the diff and perform proportionate validation. Report what changed, where it was placed, and what was actually inspected or verified; do not imply format validation or tool loading was tested unless it was. If no worthwhile improvement is justified, leave files unchanged and say so.
 ~~~~

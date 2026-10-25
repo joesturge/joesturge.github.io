@@ -18,6 +18,8 @@ The `-D` flag includes draft posts. Hugo prints the local address when the serve
 
 The Giscus theme CSS is served from the local Hugo server during development. The development config points Giscus at `localhost:1313` and adds the CORS header its iframe needs, so use the default port when previewing comments. Restart Hugo after changing the development server config.
 
+The site palette lives in `assets/scss/custom.scss`; Giscus has separate iframe themes in `static/giscus-light.css` and `static/giscus-dark.css`. Keep their accent colors aligned when updating the site theme.
+
 To check a production build:
 
 ```bash
