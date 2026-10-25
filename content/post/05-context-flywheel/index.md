@@ -54,6 +54,12 @@ It means I can capture useful details while the work is still fresh, without dum
 
 The Context Flywheel doesn't decide what should become a permanent rule. It helps me spot useful knowledge and work out where it belongs. I still decide what to keep.
 
+## How this fits Agile and AIDLC
+
+For me, this is Agile for context. No Big Design Up Front or massive instruction files; just small feedback loops that capture useful knowledge while the work is still fresh.
+
+A lot of the conversation around AIDLC or CDLC is about top-down governance. This adds a bottom-up step: notice the friction at the developer's desk, capture what happened, and commit the useful bits to Git.
+
 ## Try it out
 
 If you want to give it a go, the plugin is here: [joesturge/context-flywheel](https://github.com/joesturge/context-flywheel). Add the marketplace and install it with the GitHub CLI:
