@@ -62,7 +62,7 @@ The Context Flywheel helps identify and draft candidate knowledge, and can keep 
 
 For me, this is Agile for context. No Big Design Up Front or massive instruction files; just small feedback loops that capture useful knowledge while the work is still fresh.
 
-Much of the AIDLC or CDLC discussion I've seen focuses on top-down governance. This adds a bottom-up step: notice the friction at the developer's desk, capture what happened, and commit the useful bits to Git.
+Much of the AIDLC and CDLC discussion I've come across emphasises top-down governance. This adds a complementary bottom-up step: notice friction at the developer's desk, capture what happened, and commit the useful bits to Git.
 
 ## Try it out
 
