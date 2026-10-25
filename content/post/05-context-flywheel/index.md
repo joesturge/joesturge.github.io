@@ -52,6 +52,8 @@ I review the changes in my IDE before keeping them. If an edit is useful, I keep
 
 It means I can capture useful details while the work is still fresh, without dumping every bit of repo knowledge into global instructions. The guidance stays focused and is easier to review later.
 
+It also feels like a good way to hedge our bets with AI tools. The output is plain, readable Markdown in `.github/instructions/` or the repo docs. If the tools change, break, or I stop using them, that effort still leaves useful documentation for the next human engineer.
+
 The Context Flywheel doesn't decide what should become a permanent rule. It helps me spot useful knowledge and work out where it belongs. I still decide what to keep.
 
 ## How this fits Agile and AIDLC
@@ -68,6 +70,8 @@ If you want to give it a go, the plugin is here: [joesturge/context-flywheel](ht
 gh copilot -- plugin marketplace add joesturge/context-flywheel
 gh copilot -- plugin install context-flywheel@context-flywheel-marketplace
 ```
+
+(This example uses GitHub Copilot, but the same prompt logic and flywheel can be adapted for tools like Cursor with `.cursorrules`, Claude Code with `CLAUDE.md`, Windsurf, or your own workspace setup.)
 
 Or copy the file below into your Git repo under `.github/skills/context-flywheel/SKILL.md`.
 
