@@ -1,5 +1,5 @@
 ---
-title: "The Context Flywheel: A Cheap and Simple Technique for Pragmatic AI Development"
+title: "The Context Flywheel: A Pragmatic Approach to Context Engineering"
 description: "How I use a lightweight Copilot skill to keep repository guidance useful, focused, and low-maintenance."
 date: 2026-10-25T12:41:00Z
 image: flywheel.jpg
